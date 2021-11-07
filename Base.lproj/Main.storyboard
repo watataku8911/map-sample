@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="xhA-DD-3TF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-EB-0Ph">
+                                <rect key="frame" x="0.0" y="592" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="切り替え" id="07c-ax-hoo">
+                                        <connections>
+                                            <action selector="changeMap:" destination="BYZ-38-t0r" id="5hs-pd-u7Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MxV-r4-4cY"/>
+                                    <barButtonItem title="HAL東京" id="Sgp-YI-SCH">
+                                        <connections>
+                                            <action selector="halTokyo:" destination="BYZ-38-t0r" id="DAH-ku-8LQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xhA-DD-3TF" secondAttribute="trailing" id="36y-KO-u6L"/>
+                            <constraint firstItem="xhA-DD-3TF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5OL-cd-X4h"/>
+                            <constraint firstItem="jWh-EB-0Ph" firstAttribute="trailing" secondItem="xhA-DD-3TF" secondAttribute="trailing" id="ChD-Rx-c3c"/>
+                            <constraint firstItem="jWh-EB-0Ph" firstAttribute="top" secondItem="xhA-DD-3TF" secondAttribute="bottom" constant="23" id="QGb-7k-9B5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xhA-DD-3TF" secondAttribute="bottom" constant="98" id="RGi-YD-0rO"/>
+                            <constraint firstItem="jWh-EB-0Ph" firstAttribute="leading" secondItem="xhA-DD-3TF" secondAttribute="leading" id="VtE-xx-eUu"/>
+                            <constraint firstItem="xhA-DD-3TF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ryq-X9-VgK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayMap" destination="xhA-DD-3TF" id="W8b-cY-W4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
